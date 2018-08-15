@@ -1,1 +1,212 @@
-ECHO is on.
+@font-face {
+  font-family: 'muse-500';
+  src: url('../fonts/muse_500.otf');
+}
+@font-face {
+  font-family: 'muse-300';
+  src: url('../fonts/muse_round_300.ttf');
+}
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/open_sans_reg.ttf');
+}
+@font-face {
+  font-family: 'OpenSans-Semibold';
+  src: url('../fonts/open_sans_semibold.ttf');
+}
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html {
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+body {
+  background-color: #ffffff;
+  color: #5a6175;
+  overflow-x: hidden;
+}
+p,
+ul,
+ol {
+  margin-bottom: 0.5em;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+sup {
+  font-size: xx-small;
+  vertical-align: super;
+}
+p a,
+h5 a {
+  font-weight: bold;
+  transition: 0.3s all ease-out;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 1.5;
+  margin-bottom: 1.5em;
+}
+h1 {
+  font-size: 28px;
+  font-family: "muse-300", Georgia, serif;
+}
+h2 {
+  font-size: 26px;
+  font-family: "muse-300", Georgia, serif;
+}
+h3 {
+  font-size: 21px;
+  font-family: "muse-300", Georgia, serif;
+}
+h4 {
+  font-size: 18px;
+  font-family: "muse-300", Georgia, serif;
+}
+h5 {
+  font-size: 14px;
+  font-weight: bol;
+}
+.btn-custom {
+  color: #ffffff;
+  background-color: #5fc0c3;
+  font-size: 18px;
+  font-family: "muse-500", Arial, sans-serif;
+  transition: 0.3s all ease-out;
+}
+-btn-custom:hover {
+  box-shadow: 1px 3px 12px 0px #b3b3b3;
+  color: #ffffff;
+}

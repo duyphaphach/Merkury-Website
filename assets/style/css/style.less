@@ -1,1 +1,166 @@
-ECHO is on.
+out: ./style.css
+// *************************** FONTS *************************
+@font-face {
+  font-family: 'muse-500';
+  src: url('../fonts/muse_500.otf');
+}
+@font-face {
+  font-family: 'muse-300';
+  src: url('../fonts/muse_round_300.ttf');
+}
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/open_sans_reg.ttf');
+}
+@font-face {
+  font-family: 'OpenSans-Semibold';
+  src: url('../fonts/open_sans_semibold.ttf');
+}
+// *************************** VARIABLES *************************
+
+// Old design color: #5fc0c3
+// New design color: #03a9f4
+// - main color: #5fc0c3;
+// - white-color: #ffffff;
+// - dark grey color: #565659;
+// - light gray color: #5a6175;
+
+@main-color:  #5fc0c3;
+@white-color: #ffffff;
+@dark-grey-color: #565659;
+@light-gray-color: #5a6175;
+@black-color: #000000;
+
+@muse_500: "muse-500", Arial, sans-serif;
+@muse_round_300: "muse-300", Georgia, serif;
+@open_sans_reg: "OpenSans", Helvetica, Arial, sans-serif;
+@open_sans_semibold: "OpenSans-Semibold", Arial, sans-serif;
+
+// *************************** CUSTOM RESET *************************
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+// *************************** CUSTOM SETTINGS *************************
+
+html {
+  background-color: @white-color;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: @white-color;
+  color: @light-gray-color;
+  overflow-x: hidden;
+}
+
+p, ul, ol {
+  margin-bottom: 0.5em;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+sup {
+  font-size: xx-small;
+  vertical-align: super;
+}
+
+p a, h5 a {
+  font-weight: bold;
+  transition: 0.3s all ease-out;
+}
+
+h1, h2, h3, h4, h5 {
+  line-height: 1.5;
+  margin-bottom: 1.5em;
+}
+
+h1 {
+  font-size: 28px;
+  font-family: @muse_round_300;
+}
+
+h2 {
+  font-size: 26px;
+  font-family: @muse_round_300;
+}
+
+h3 {
+  font-size: 21px;
+  font-family: @muse_round_300;
+}
+
+h4 {
+  font-size: 18px;
+  font-family: @muse_round_300;
+}
+
+h5 {
+  font-size: 14px;
+  font-weight: bol
+}
+
+.btn-custom {
+  color: @white-color;
+  background-color: @main-color;
+  font-size: 18px;
+  font-family: @muse_500;
+  transition: 0.3s all ease-out;
+}
+
+-btn-custom:hover {
+  box-shadow: 1px 3px 12px 0px darken(@white-color, 30%);
+  color: @white-color;
+}
