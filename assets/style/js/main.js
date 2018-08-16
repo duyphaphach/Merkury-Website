@@ -19,7 +19,7 @@ $(document).ready(() => {
     if ($('#navbar').offset().top > 50) {
       $('#navbar').addClass('navbar-shrink');
     } else {
-      $('#navbar').removeClass('navbar-shrink')
+      $('#navbar').removeClass('navbar-shrink');
     }
   })
 

@@ -284,12 +284,37 @@ h5 {
   color: #5a6175;
   font-family: "OpenSans", Helvetica, Arial, sans-serif;
 }
+#get-involved {
+  padding: 50px 0;
+}
+#get-involved .container h3 {
+  font-family: "muse-500", Arial, sans-serif;
+  margin-bottom: 50px;
+}
+#get-involved .container .row .col-md-4 img {
+  height: 150px;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 30px;
+}
+#get-involved .container .row .col-md-4 h4 {
+  font-family: "muse-500", Arial, sans-serif;
+  margin-bottom: 15px;
+}
+#get-involved .container .row .col-md-4 p {
+  font-family: "OpenSans", Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+#get-involved .container .row .col-md-4 a {
+  margin-top: 10px;
+}
+.navbar-shrink {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  background-color: #ffffff !important;
+}
 @media only screen and (min-width: 300px) {
   #navbar {
     box-shadow: 0px 1px 7px #5a6175;
-  }
-  #navbar .navbar-shrink {
-    padding: 10px 0px;
-    background-color: #ffffff;
   }
 }
