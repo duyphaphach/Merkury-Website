@@ -164,3 +164,102 @@ h5 {
   box-shadow: 1px 3px 12px 0px darken(@white-color, 30%);
   color: @white-color;
 }
+
+// ************************* Nav bar ***********************
+
+#navbar {
+  padding: 15px;
+  border: none;
+  background: @white-color;
+  transition: padding-top 0.3s, padding-bottom 0.3s;
+
+  .navbar-toggler {
+    background: @main-color;
+    border: none;
+  }
+
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        color: @black-color;
+        font-weight: 400;
+        font-size: 14px;
+        font-family: @muse_500;
+        transition: all 0.3s ease-out
+      }
+      .nav-link .active,
+      .nav-link:hover {
+        background: @main-color;
+        color: @white-color !important;
+        transition: all 0.5s ease-out;
+      }
+    }
+  }
+}
+
+// ******************************** HEADER *****************************
+#header {
+  overflow-x: hidden;
+  #header-container {
+    padding: 50px;
+    background: url('../../img/Header.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .text-container {
+      margin-top: 100px;
+      h1, h4 {
+        color: @white-color;
+        line-height: 1.5em;
+      }
+      h1 {
+        font-family: @muse_round_300;
+      }
+      h4 {
+        font-family: @open_sans_reg
+      }
+    }
+  } // End header-container
+
+  #footer-container {
+    background-color: darken(@white-color, 5%);
+    padding: 30px;
+    border-bottom: 1px solid darken(@white-color, 10%);
+    button {
+      color: @white-color;
+      background-color: @main-color;
+      font-size: 30px;
+      font-family: @muse_500;
+      float: right;
+      margin: 0 0 10 10;
+    }
+    .event-details {
+      font-family: @muse_500;
+      font-size: 18px;
+      color: @dark-grey-color;
+      a {
+        font-family: @open_sans_semibold;
+        font-size: 16px;
+      }
+      p {
+        color: @light-gray-color;
+        font-family: @open_sans_reg
+      }
+    }
+  } // End footer-container
+}
+
+// **************************** MEDIA QUERY **************************
+
+// Only applied when screen width is 300 or higher
+@media only screen and (min-width: 300px) {
+  #navbar {
+    box-shadow: 0px 1px 7px @light-gray-color;
+  }
+
+  #navbar .navbar-shrink {
+    padding: 10px 0px;
+    background-color: @white-color;
+  }
+}

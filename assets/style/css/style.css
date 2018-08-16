@@ -210,3 +210,86 @@ h5 {
   box-shadow: 1px 3px 12px 0px #b3b3b3;
   color: #ffffff;
 }
+#navbar {
+  padding: 15px;
+  border: none;
+  background: #ffffff;
+  transition: padding-top 0.3s, padding-bottom 0.3s;
+}
+#navbar .navbar-toggler {
+  background: #5fc0c3;
+  border: none;
+}
+#navbar .navbar-nav .nav-item .nav-link {
+  color: #000000;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: "muse-500", Arial, sans-serif;
+  transition: all 0.3s ease-out;
+}
+#navbar .navbar-nav .nav-item .nav-link .active,
+#navbar .navbar-nav .nav-item .nav-link:hover {
+  background: #5fc0c3;
+  color: #ffffff !important;
+  transition: all 0.5s ease-out;
+}
+#header {
+  overflow-x: hidden;
+}
+#header #header-container {
+  padding: 50px;
+  background: url('../../img/Header.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#header #header-container .text-container {
+  margin-top: 100px;
+}
+#header #header-container .text-container h1,
+#header #header-container .text-container h4 {
+  color: #ffffff;
+  line-height: 1.5em;
+}
+#header #header-container .text-container h1 {
+  font-family: "muse-300", Georgia, serif;
+}
+#header #header-container .text-container h4 {
+  font-family: "OpenSans", Helvetica, Arial, sans-serif;
+}
+#header #footer-container {
+  background-color: #f2f2f2;
+  padding: 30px;
+  border-bottom: 1px solid #e6e6e6;
+}
+#header #footer-container button {
+  color: #ffffff;
+  background-color: #5fc0c3;
+  font-size: 30px;
+  font-family: "muse-500", Arial, sans-serif;
+  float: right;
+  margin: 0 0 10 10;
+}
+#header #footer-container .event-details {
+  font-family: "muse-500", Arial, sans-serif;
+  font-size: 18px;
+  color: #565659;
+}
+#header #footer-container .event-details a {
+  font-family: "OpenSans-Semibold", Arial, sans-serif;
+  font-size: 16px;
+}
+#header #footer-container .event-details p {
+  color: #5a6175;
+  font-family: "OpenSans", Helvetica, Arial, sans-serif;
+}
+@media only screen and (min-width: 300px) {
+  #navbar {
+    box-shadow: 0px 1px 7px #5a6175;
+  }
+  #navbar .navbar-shrink {
+    padding: 10px 0px;
+    background-color: #ffffff;
+  }
+}
