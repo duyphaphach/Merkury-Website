@@ -421,8 +421,8 @@ h5 {
 #blog .owl-nav {
   display: inline-block;
   position: relative;
-  left: 48%;
   margin-top: 20px;
+  left: 47%;
 }
 #blog .owl-prev {
   font-size: 30px;
@@ -478,5 +478,8 @@ h5 {
   }
   #event {
     padding-bottom: 0px;
+  }
+  #mission {
+    opacity: 1 !important;
   }
 }
