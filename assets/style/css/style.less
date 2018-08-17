@@ -337,6 +337,43 @@ h5 {
 
 }
 
+// **************************** MEMBERS SECTION **************************
+
+#members {
+  padding: 50px 50px 0 50px;
+  .container {
+    h3 {
+      font-family: @muse_500;
+      margin-bottom: 60px;
+    }
+    #members-slider {
+      img {
+        height: 50px;
+        width: 120px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+      }
+      img:hover {
+        transform: scale(1.1);
+        transition: all 0.5s ease-out;
+      }
+    }
+
+    .owl-carousel .owl-dots.disabled {
+      display: inline-block;
+      margin-top: 50px;
+    }
+
+    .owl-theme .owl-dots .owl-dot.active span,
+    .owl-theme .owl-dots .owl-dot:hover span {
+      background-color: @main-color !important;
+    }
+
+    .owl-theme .owl-dots .owl-dot span {
+      background-color: @light-gray-color !important;
+    }
+  }
+}
 // **************************** MEDIA QUERY **************************
 
 // Only applied when screen width is 300 or higher
