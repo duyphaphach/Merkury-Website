@@ -287,6 +287,56 @@ h5 {
   padding-bottom: 10px !important;
   background-color: @white-color !important;
 }
+
+// **************************** MISSION SECTION **************************
+#mission {
+  background-color: darken(@white-color, 5%);
+  padding: 50px 0;
+  border-top: 1px solid darken(@white-color, 10%);
+  border-top: 1px solid darken(@white-color, 10%);
+  .container {
+    h3, h4 {
+      font-family: @muse_500;
+    }
+    h5 {
+      font-family: @open_sans_semibold;
+    }
+    .row {
+      .col-md-4 {
+        .card {
+          border: none;
+          border-radius: 5px;
+          margin-top: 50px;
+          .icon-container {
+            border-radius: 50%;
+            margin: 0 auto;
+            border: 8px solid @white-color;
+            background-color: @main-color;
+            margin-top: -45px;
+            img {
+              padding: 16px;
+              width: 75px;
+              height: 70px;
+            }
+          }
+          card-body {
+            .card-title {
+              color: @main-color;
+              margin-bottom: 15px;
+              font-family: @muse_round_300;
+            }
+            .card-text {
+              font-family: @open_sans_reg;
+              line-height: 1.5
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
 // **************************** MEDIA QUERY **************************
 
 // Only applied when screen width is 300 or higher
