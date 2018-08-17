@@ -187,7 +187,7 @@ h5 {
         font-family: @muse_500;
         transition: all 0.3s ease-out
       }
-      .nav-link .active,
+      .nav-link.active,
       .nav-link:hover {
         background: @main-color;
         color: @white-color !important;
@@ -244,7 +244,7 @@ h5 {
       }
       p {
         color: @light-gray-color;
-        font-family: @open_sans_reg
+        font-family: @open_sans_reg;
       }
     }
   } // End footer-container
@@ -294,6 +294,8 @@ h5 {
   padding: 50px 0;
   border-top: 1px solid darken(@white-color, 10%);
   border-top: 1px solid darken(@white-color, 10%);
+  opacity: 0;
+  transition: all 0.7s ease-out;
   .container {
     h3, h4 {
       font-family: @muse_500;
@@ -319,7 +321,7 @@ h5 {
               height: 70px;
             }
           }
-          card-body {
+          .card-body {
             .card-title {
               color: @main-color;
               margin-bottom: 15px;
@@ -403,11 +405,114 @@ h5 {
   }
 }
 
+// **************************** BLOG SECTION **************************
+#blog {
+  padding: 0 0 50px 0;
+
+  h3 {
+    font-family: @muse_500;
+    color: @light-gray-color;
+    margin: 50px 0;
+  }
+  #blog-slider {
+    .item {
+      a {
+        h4 {
+          font-family: @open_sans_semibold;
+          color: @main-color;
+          border-bottom: 1px solid darken(@white-color, 5%);
+        }
+        p {
+          color: @light-gray-color;
+          .main-p {
+            font-family: @open_sans_reg;
+            color: @light-gray-color;
+            line-height: 1.5;
+            border-bottom: 1px solid darken(@white-color, 5%);
+          }
+        }
+      }
+    }
+  }
+
+  .owl-nav {
+    display: inline-block;
+    position: relative;
+    left: 48%;
+    margin-top: 20px;
+  }
+
+  .owl-prev {
+    font-size: 30px;
+    color: @main-color;
+    margin-right: 25px;
+  }
+
+  .owl-next {
+    font-size: 30px;
+    color: @main-color;
+  }
+}
+// *************************** CONTACT SECTION *************************
+#contact {
+  padding: 50px 0;
+  label {
+    margin-bottom: 10px;
+    font-family: @open_sans_reg;
+  }
+}
+
+// **************************** FOOTER **************************
+
+#footer {
+  padding: 20px;
+  background-color: @main-color;
+
+  .container-fluid {
+    .social {
+      margin-bottom: 10px;
+      a {
+        color: @white-color;
+        font-size: 15px;
+        margin-left: 20px;
+      }
+    }
+    .copyright-area {
+      p {
+        color: @black-color;
+        font-size: 20px;
+        a {
+          color: @white-color;
+          text-decoration: none;;
+        }
+      }
+    }
+  }
+}
+
+
 // **************************** MEDIA QUERY **************************
 
 // Only applied when screen width is 300 or higher
 @media only screen and (min-width: 300px) {
   #navbar {
     box-shadow: 0px 1px 7px @light-gray-color;
+  }
+}
+
+// Why choose 414, because it's now the largest mobile phone screen size
+@media only screen and (max-width: 414px) {
+  #header #footer-container p {
+     letter-spacing: 1px;
+     line-height: 1.6;
+  }
+  #get-involved .container .row .col-md-4 a {
+    margin-bottom: 20px;
+  }
+  #event .container .row .col-md-4 .card {
+    margin-bottom: 35px;
+  }
+  #event {
+    padding-bottom: 0px;
   }
 }
