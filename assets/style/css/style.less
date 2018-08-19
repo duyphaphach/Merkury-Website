@@ -1,43 +1,43 @@
 out: ./style.css
 // *************************** FONTS *************************
+
 @font-face {
-  font-family: 'muse-500';
-  src: url('../fonts/muse_500.otf');
+  font-family: 'roboto-thin';
+  src: url(../fonts/Roboto-Thin.ttf);
 }
 @font-face {
-  font-family: 'muse-300';
-  src: url('../fonts/muse_round_300.ttf');
+  font-family: 'roboto-bold';
+  src: url(../fonts/Roboto-Bold.ttf);
 }
 @font-face {
-  font-family: 'OpenSans';
-  src: url('../fonts/open_sans_reg.ttf');
+  font-family: 'roboto-medium';
+  src: url(../fonts/Roboto-Medium.ttf);
 }
 @font-face {
-  font-family: 'OpenSans-Semibold';
-  src: url('../fonts/open_sans_semibold.ttf');
+  font-family: 'roboto-regular';
+  src: url(../fonts/Roboto-Regular.ttf);
 }
+
 // *************************** VARIABLES *************************
 
-// Old design color: #5fc0c3
-// New design color: #03a9f4
-// - main color: #5fc0c3;
-// - white-color: #ffffff;
-// - dark grey color: #565659;
-// - light gray color: #5a6175;
+@dark-blue-color: #oe1a35;
 
-@main-color:  #5fc0c3;
-@white-color: #ffffff;
-@dark-grey-color: #565659;
-@light-gray-color: #5a6175;
+@light-blue-color: #5584ff;
+
+@light-grey-color: #8492af;
+
 @black-color: #000000;
 
-@muse_500: "muse-500", Arial, sans-serif;
-@muse_round_300: "muse-300", Georgia, serif;
-@open_sans_reg: "OpenSans", Helvetica, Arial, sans-serif;
-@open_sans_semibold: "OpenSans-Semibold", Arial, sans-serif;
+@white-color: #ffffff;
 
-// *************************** CUSTOM RESET *************************
+// FONTS USED
 
+@Roboto-regular-font: 'roboto-regular', Georgia, serif;
+@Roboto-bold-font: 'roboto-bold', Helvetica, Arial, sans-serif;
+@Roboto-thin: 'roboto-thin', Arial, sans-serif;
+@Roboto-medium: 'roboto-medium', Arial, sans-serif;
+
+// *************************** GENERAL RESET *************************
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -68,11 +68,15 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
-	line-height: 1;
-}
-ol, ul {
+ol, ul, li {
 	list-style: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+  transition: all 0.5s ease-out;
 }
 blockquote, q {
 	quotes: none;
@@ -86,9 +90,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
 // *************************** CUSTOM SETTINGS *************************
-
 html {
   background-color: @white-color;
   overflow-x: hidden;
@@ -96,426 +98,70 @@ html {
 
 body {
   background-color: @white-color;
-  color: @light-gray-color;
-  overflow-x: hidden;
+  overflow: hidden;
+}
+
+section {
+  padding: 50px 0;
 }
 
 p, ul, ol {
   margin-bottom: 0.5em;
 }
 
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-sup {
-  font-size: xx-small;
-  vertical-align: super;
-}
-
 p a, h5 a {
   font-weight: bold;
-  transition: 0.3s all ease-out;
+  transition: all 0.5s ease-out;
 }
 
 h1, h2, h3, h4, h5 {
-  line-height: 1.5;
+  line-height: 1.5em;
   margin-bottom: 1.5em;
 }
+// *************************** NAVBAR STYLE *************************
 
-h1 {
-  font-size: 28px;
-  font-family: @muse_round_300;
-}
-
-h2 {
-  font-size: 26px;
-  font-family: @muse_round_300;
-}
-
-h3 {
-  font-size: 21px;
-  font-family: @muse_round_300;
-}
-
-h4 {
-  font-size: 18px;
-  font-family: @muse_round_300;
-}
-
-h5 {
-  font-size: 14px;
-  font-weight: bol
-}
-
-.btn-custom {
-  color: @white-color;
-  background-color: @main-color;
-  font-size: 18px;
-  font-family: @muse_500;
-  transition: 0.3s all ease-out;
-}
-
--btn-custom:hover {
-  box-shadow: 1px 3px 12px 0px darken(@white-color, 30%);
-  color: @white-color;
-}
-
-// ************************* Nav bar ***********************
-
-#navbar {
-  padding: 15px;
-  border: none;
-  background: @white-color;
-  transition: padding-top 0.3s, padding-bottom 0.3s;
-
+#main-nav {
+  background-color: transparent;
+  padding-top: 20px;
+  transition: padding-top 0.2s, padding-bottom 0.3s;
   .navbar-toggler {
-    background: @main-color;
-    border: none;
+    padding: 13px;
+    border: 0;
+    color: @white-color;
   }
-
+  .navbar-brand {
+    margin-right: 0;
+    img {
+      width: 70%;
+    }
+  }
   .navbar-nav {
     .nav-item {
       .nav-link {
-        color: @black-color;
-        font-weight: 400;
         font-size: 14px;
-        font-family: @muse_500;
-        transition: all 0.3s ease-out
+        padding: 7px 15px !important;
+        letter-spacing: 1px;
+        color: @white-color;
+        font-family: @Roboto-regular-font;
+        border: 3px solid transparent
+      }
+      #login-btn {
+        padding: 8px 30px !important;
+        background-color: @dark-blue-color;
+        color: @light-blue-color;
+        border: 1px solid @light-blue-color;
+        border-radius: 25px;
+      }
+      #login-btn:hover {
+        background-color: @light-blue-color;
+        color: @white-color !important;
       }
       .nav-link.active,
       .nav-link:hover {
-        background: @main-color;
-        color: @white-color !important;
-        transition: all 0.5s ease-out;
-      }
-    }
-  }
-}
-
-// ******************************** HEADER *****************************
-#header {
-  overflow-x: hidden;
-  #header-container {
-    padding: 50px;
-    background: url('../../img/Header.png');
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    .text-container {
-      margin-top: 100px;
-      h1, h4 {
+        background-color: @light-blue-color;
         color: @white-color;
-        line-height: 1.5em;
-      }
-      h1 {
-        font-family: @muse_round_300;
-      }
-      h4 {
-        font-family: @open_sans_reg
+        border-radius: 17px;
       }
     }
-  } // End header-container
-
-  #footer-container {
-    background-color: darken(@white-color, 5%);
-    padding: 30px;
-    border-bottom: 1px solid darken(@white-color, 10%);
-    button {
-      color: @white-color;
-      background-color: @main-color;
-      font-size: 30px;
-      font-family: @muse_500;
-      float: right;
-      margin: 0 0 10 10;
-    }
-    .event-details {
-      font-family: @muse_500;
-      font-size: 18px;
-      color: @dark-grey-color;
-      a {
-        font-family: @open_sans_semibold;
-        font-size: 16px;
-      }
-      p {
-        color: @light-gray-color;
-        font-family: @open_sans_reg;
-      }
-    }
-  } // End footer-container
-}
-
-// ****************************** GET INVOLVED ************************
-
-#get-involved {
-  padding: 50px 0;
-  .container {
-    h3 {
-      font-family: @muse_500;
-      margin-bottom: 50px;
-    }
-    .row {
-      .col-md-4 {
-        img {
-          height: 150px;
-          margin: 0 auto;
-          display: block;
-          margin-bottom: 30px;
-        }
-        h4 {
-          font-family: @muse_500;
-          margin-bottom: 15px;
-        }
-        p {
-          font-family: @open_sans_reg;
-          line-height: 1.5;
-        }
-        a {
-          margin-top: 10px;
-        }
-      }
-    }
-  }
-}
-.navbar-shrink {
-  padding-top: 10px !important;
-  padding-bottom: 10px !important;
-  background-color: @white-color !important;
-}
-
-// **************************** MISSION SECTION **************************
-#mission {
-  background-color: darken(@white-color, 5%);
-  padding: 50px 0;
-  border-top: 1px solid darken(@white-color, 10%);
-  border-top: 1px solid darken(@white-color, 10%);
-  opacity: 0;
-  transition: all 0.7s ease-out;
-  .container {
-    h3, h4 {
-      font-family: @muse_500;
-    }
-    h5 {
-      font-family: @open_sans_semibold;
-    }
-    .row {
-      .col-md-4 {
-        .card {
-          border: none;
-          border-radius: 5px;
-          margin-top: 50px;
-          .icon-container {
-            border-radius: 50%;
-            margin: 0 auto;
-            border: 8px solid @white-color;
-            background-color: @main-color;
-            margin-top: -45px;
-            img {
-              padding: 16px;
-              width: 75px;
-              height: 70px;
-            }
-          }
-          .card-body {
-            .card-title {
-              color: @main-color;
-              margin-bottom: 15px;
-              font-family: @muse_round_300;
-            }
-            .card-text {
-              font-family: @open_sans_reg;
-              line-height: 1.5
-            }
-          }
-        }
-      }
-    }
-  }
-
-}
-
-// **************************** MEMBERS SECTION **************************
-
-#members {
-  padding: 50px 50px 0 50px;
-  .container {
-    h3 {
-      font-family: @muse_500;
-      margin-bottom: 60px;
-    }
-    #members-slider {
-      img {
-        height: 50px;
-        width: 120px;
-        margin: 0 auto;
-        margin-bottom: 20px;
-      }
-      img:hover {
-        transform: scale(1.1);
-        transition: all 0.5s ease-out;
-      }
-    }
-
-    .owl-carousel .owl-dots.disabled {
-      display: inline-block;
-      margin-top: 50px;
-    }
-
-    .owl-theme .owl-dots .owl-dot.active span,
-    .owl-theme .owl-dots .owl-dot:hover span {
-      background-color: @main-color !important;
-    }
-
-    .owl-theme .owl-dots .owl-dot span {
-      background-color: @light-gray-color !important;
-    }
-  }
-}
-
-// **************************** EVENT SECTION **************************
-
-#event {
-  padding: 50px 0;
-  font-family: @muse_500;
-  .container {
-    .row{
-      .col-md-4 {
-        .card {
-          a {
-            img {
-              opacity: 0.7;
-              height: 200px;
-            }
-            img:hover {
-              opacity: 1;
-              transition: all 0.7s ease-out;
-            }
-          }
-          .card-text {
-            line-height: 1.3;
-          }
-        }
-      }
-    }
-  }
-}
-
-// **************************** BLOG SECTION **************************
-#blog {
-  padding: 0 0 50px 0;
-
-  h3 {
-    font-family: @muse_500;
-    color: @light-gray-color;
-    margin: 50px 0;
-  }
-  #blog-slider {
-    .item {
-      a {
-        h4 {
-          font-family: @open_sans_semibold;
-          color: @main-color;
-          border-bottom: 1px solid darken(@white-color, 5%);
-        }
-        p {
-          color: @light-gray-color;
-          .main-p {
-            font-family: @open_sans_reg;
-            color: @light-gray-color;
-            line-height: 1.5;
-            border-bottom: 1px solid darken(@white-color, 5%);
-          }
-        }
-      }
-    }
-  }
-
-  .owl-nav {
-    display: inline-block;
-    position: relative;
-    margin-top: 20px;
-    left: 47%;
-  }
-
-  .owl-prev {
-    font-size: 30px;
-    color: @main-color;
-    margin-right: 25px;
-  }
-
-  .owl-next {
-    font-size: 30px;
-    color: @main-color;
-  }
-}
-// *************************** CONTACT SECTION *************************
-#contact {
-  padding: 50px 0;
-  label {
-    margin-bottom: 10px;
-    font-family: @open_sans_reg;
-  }
-}
-
-// **************************** FOOTER **************************
-
-#footer {
-  padding: 20px;
-  background-color: @main-color;
-
-  .container-fluid {
-    .social {
-      margin-bottom: 10px;
-      a {
-        color: @white-color;
-        font-size: 15px;
-        margin-left: 20px;
-      }
-    }
-    .copyright-area {
-      p {
-        color: @black-color;
-        font-size: 20px;
-        a {
-          color: @white-color;
-          text-decoration: none;;
-        }
-      }
-    }
-  }
-}
-
-
-// **************************** MEDIA QUERY **************************
-
-// Only applied when screen width is 300 or higher
-@media only screen and (min-width: 300px) {
-  #navbar {
-    box-shadow: 0px 1px 7px @light-gray-color;
-  }
-}
-
-// Why choose 414, because it's now the largest mobile phone screen size
-@media only screen and (max-width: 414px) {
-  #header #footer-container p {
-     letter-spacing: 1px;
-     line-height: 1.6;
-  }
-  #get-involved .container .row .col-md-4 a {
-    margin-bottom: 20px;
-  }
-  #event .container .row .col-md-4 .card {
-    margin-bottom: 35px;
-  }
-  #event {
-    padding-bottom: 0px;
-  }
-  #mission {
-    opacity: 1 !important;
   }
 }
